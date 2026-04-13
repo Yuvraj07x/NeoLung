@@ -58,3 +58,33 @@ Out of all the algorithms so implemented, **Logistic Regression** performed the 
 **Confusion Matrix:**
 
 ![download](https://github.com/rohitinu6/Lung_Cancer_Prediction_Using_Machine_Learning/assets/113301503/b1e82b1c-2487-486a-b476-d34786148d40)
+
+## Web Application
+
+A Streamlit web app has been created to allow users to input their symptoms and get a lung cancer risk prediction.
+
+### Setup
+
+1. Install the required packages:
+   ```
+   pip install -r requirements.txt
+   ```
+
+2. Run the app:
+   ```
+   streamlit run app.py
+   ```
+
+3. Open the provided URL in your browser (usually http://localhost:8501).
+
+### Features
+
+- User-friendly input form for symptoms and personal details.
+- Prediction using the trained RandomForest model.
+- Displays risk probability and visual indicators.
+
+### Files
+
+- `app.py`: The Streamlit application code.
+- `rf_model.pkl`: The saved trained model.
+- `requirements.txt`: List of dependencies.
