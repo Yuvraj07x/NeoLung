@@ -29,21 +29,21 @@ shortness_of_breath = st.selectbox("Do you have shortness of breath?", ["No", "Y
 swallowing_difficulty = st.selectbox("Do you have difficulty swallowing?", ["No", "Yes"])
 chest_pain = st.selectbox("Do you have chest pain?", ["No", "Yes"])
 
-# Map inputs to encoded values
-gender_val = 1 if gender == "Male" else 2
-smoking_val = 1 if smoking == "Yes" else 2
-yellow_fingers_val = 1 if yellow_fingers == "Yes" else 2
-anxiety_val = 1 if anxiety == "Yes" else 2
-peer_pressure_val = 1 if peer_pressure == "Yes" else 2
-chronic_disease_val = 1 if chronic_disease == "Yes" else 2
-fatigue_val = 1 if fatigue == "Yes" else 2
-allergy_val = 1 if allergy == "Yes" else 2
-wheezing_val = 1 if wheezing == "Yes" else 2
-alcohol_consuming_val = 1 if alcohol_consuming == "Yes" else 2
-coughing_val = 1 if coughing == "Yes" else 2
-shortness_of_breath_val = 1 if shortness_of_breath == "Yes" else 2
-swallowing_difficulty_val = 1 if swallowing_difficulty == "Yes" else 2
-chest_pain_val = 1 if chest_pain == "Yes" else 2
+# Map inputs to encoded values (fixed inversion: Yes=2/present=risk, No=1)
+gender_val = 1 if gender == "Male" else 2  # Keep as per training
+smoking_val = 2 if smoking == "Yes" else 1
+yellow_fingers_val = 2 if yellow_fingers == "Yes" else 1
+anxiety_val = 2 if anxiety == "Yes" else 1
+peer_pressure_val = 2 if peer_pressure == "Yes" else 1
+chronic_disease_val = 2 if chronic_disease == "Yes" else 1
+fatigue_val = 2 if fatigue == "Yes" else 1
+allergy_val = 2 if allergy == "Yes" else 1
+wheezing_val = 2 if wheezing == "Yes" else 1
+alcohol_consuming_val = 2 if alcohol_consuming == "Yes" else 1
+coughing_val = 2 if coughing == "Yes" else 1
+shortness_of_breath_val = 2 if shortness_of_breath == "Yes" else 1
+swallowing_difficulty_val = 2 if swallowing_difficulty == "Yes" else 1
+chest_pain_val = 2 if chest_pain == "Yes" else 1
 
 # Create input array
 input_data = np.array([[gender_val, age, smoking_val, yellow_fingers_val, anxiety_val,
